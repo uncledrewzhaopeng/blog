@@ -1,113 +1,152 @@
 module.exports = {
-    title: 'Eddie-blog',
-    keywords: '前端开发',
-    description: 'Eddie-blog',
-    repo: 'https://github.com/uncledrewzhaopeng/blog.git',
-    base: '/blog/',
-    head: [
-        ['link', { rel: 'icon', href: '/favicon.ico' }]
+  theme: 'reco',
+  title: 'Eddie-Blog',
+  keywords: '前端开发',
+  description: '自己有决心并且付出精力是成功的先决条件',
+  repo: 'https://github.com/uncledrewzhaopeng/blog.git',
+  // base: '/blog/',
+  base: '/',
+  head: [
+    ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    // 引入jquery
+    [
+      'script',
+      {
+        language: 'javascript',
+        type: 'text/javascript',
+        src: 'https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js',
+      },
     ],
-    lastUpdated: 'Last Updated',
-    themeConfig: {
-        logo: '/img/logo.png',
-        nav: [
-            { text: '首页', link: '/' },
-            { text: 'JS', link: '/js_docs/' },
-            { text: 'CSS', link: '/css_docs/' },
-            { text: 'Vue', link: '/vue_docs/' },
-            { text: 'Node', link: '/node_docs/' },
-            { text: 'Dart', link: '/dart/' },
-            // { text: 'React', link: '/react_docs/' },
-            // {
-            //     text: '2020',
-            //     ariLabel: '2020',
-            //     items: [
-            //         { text: 'May', link: '/2020/5/' },
-            //         { text: 'June', link: '/2020/6/' }
-            //     ]
-            // },
-            { text: '其它', link: '/other/' },
-            // { text:'每周计划',link:'/plan/' },
-            { text: 'GitHub', link: 'https://github.com/uncledrewzhaopeng/blog.git' }
-        ],
-        sidebar: {
-            '/js_docs/': [
-                '',
-                'JS精度问题',
-                'Set数据结构',
-                'Map数据结构',
-                'with语法',
-                'void 0与undefined的关系',
-                '浅谈基本包装类型',
-                'js中容易忽略的参数',
-                'new的时候干了啥',
-                'JS调用函数的4种方式',
-                '一文了解this指向',
-                '函数防抖和节流',
-                'EventTarget介绍',
-                '深拷贝和浅拷贝了解一下',
-                '原型和原型链',
-                'JS生成UUID的多种方式',
-                'JSON中的stringify方法',
-                '一网打尽JS中的循环和遍历',
-                '函数的形参和实参',
-                '使用原生js实现一个回到顶部的功能',
-                '5分钟回顾原生ajax的几个知识点',
-                '10分钟回顾Location对象的几个知识点',
-                'DOM操作常用API总结',
-                'JavaScript的执行机制',
-                '多种方式实现前端图片下载',
-                '快来和fetch玩耍吧',
-                'Storage对象',
-                'instanceof和typeof原理回顾'
-            ],
-            '/css_docs/': [
-                '',
-                '一些css片段',
-                '鼠标点击水波效果',
-                '小球来回滚动',
-                '纯css实现一个菜单的隐藏显示功能',
-                'CSS媒体查询',
-                '三角形的css画法'
-            ],
-            // '/2020/': [
-            //     ['/2020/5/', '5月份'],
-            //     ['/2020/6/', '6月份']
-            // ],
-            '/other/': [
-                '',
-                'tool',
-                'vuepress搭建个人博客并部署',
-                'Git常用指令',
-                'Markdown语法',
-                'npm发包流程',
-                '发行ERC20代币',
-                'Flutter构建Android包',
-                '简简单单的来入个deno的门吧',
-                '移动端300ms延迟以及点击穿透',
-                '来了解下字符编码的历史吧'
-            ],
-            '/vue_docs/': [
-                '',
-                '数据响应式'
-            ],
-            // '/plan/':[
-            //     '',
-            //     '200525-200531'
-            // ],
-            '/node_docs/': [
-                '',
-                'node发送邮件',
-                'exports和module.exports',
-            ],
-            // '/dart/': [
-            //     '',
-            //     '变量和类型',
-            //     '函数',
-            //     '运算符和控制流程语句',
-            //     '类',
-            //     '其他'
-            // ]
-        }
-    }
+    // 引入鼠标点击脚本
+    [
+      'script',
+      {
+        language: 'javascript',
+        type: 'text/javascript',
+        src: '/js/MouseClickEffect.js',
+      },
+    ],
+  ],
+  lastUpdated: 'Last Updated',
+  // 多语言配置
+  // locales: {
+  //     '/': {
+  //         lang: 'zh-CN'
+  //     },
+  //     '/en/': {
+  //         lang: 'en-US'
+  //     }
+  // },
+  themeConfig: {
+    author: 'Eddie',
+    authorAvatar: '/img/My.jpg',
+    type: 'blog',
+    logo: '/img/logo.png',
+    // 评论
+    valineConfig: {
+      appId: 'ns5dzf0Yo2oTFbuVzVt3cL4b-gzGzoHsz', // your appId
+      appKey: 'rLM1IeWEUuOJekFg86QltXc1', // your appKey
+    },
+    // 博客配置
+    blogConfig: {
+      category: {
+        location: 2, // 在导航栏菜单中所占的位置，默认2
+        text: '分类', // 默认文案 “分类”
+      },
+      tag: {
+        location: 3, // 在导航栏菜单中所占的位置，默认3
+        text: '标签', // 默认文案 “标签”
+      },
+    },
+    nav: [
+      { text: '首页', link: '/', icon: 'reco-home' },
+      { text: '时间轴', link: '/timeline/', icon: 'reco-date' },
+      // { text: 'JS', link: '/js_docs/' },
+      // { text: 'CSS', link: '/css_docs/' },
+      // { text: 'Vue', link: '/vue_docs/' },
+      // { text: 'Node', link: '/node_docs/' },
+      { text: '项目笔记', link: '/note/', icon: 'reco-suggestion' },
+      { text: '计划', link: '/plan/', icon: 'reco-coding' },
+      { text: '其它', link: '/other/', icon: 'reco-other' },
+      { text: 'GitHub', link: 'https://github.com/uncledrewzhaopeng', icon: 'reco-github' },
+    ],
+    // sidebar: "auto",
+    sidebar: {
+      '/js_docs/': [
+        '',
+        'js_docs_1',
+        'js_docs_2',
+        'js_docs_3',
+        'js_docs_4',
+        'js_docs_5',
+        'js_docs_6',
+        'js_docs_7',
+        'js_docs_8',
+        'js_docs_9',
+        'js_docs_10',
+        'js_docs_11',
+        'js_docs_12',
+        'js_docs_13',
+        'js_docs_14',
+        'js_docs_15',
+        'js_docs_16',
+        'js_docs_17',
+        'js_docs_18',
+        'js_docs_19',
+        'js_docs_20',
+        'js_docs_21',
+        'js_docs_22',
+        'js_docs_23',
+        'js_docs_24',
+        'js_docs_25',
+        'js_docs_26',
+        'js_docs_27',
+      ],
+      '/css_docs/': [
+        '',
+        'css_docs_1',
+        'css_docs_2',
+        'css_docs_3',
+        'css_docs_4',
+        'css_docs_5',
+        'css_docs_6',
+      ],
+      '/other/': [
+        '',
+        'other_1',
+        'other_2',
+        'other_3',
+        'other_4',
+        'other_5',
+        'other_6',
+        'other_7',
+        'other_8',
+        'other_9',
+      ],
+      '/vue_docs/': ['', 'vue_docs_1'],
+      '/plan/': ['', '20210416-unknown'],
+      '/node_docs/': ['', 'node_docs_1', 'node_docs_2'],
+      '/note/': [
+        '',
+        '1note',
+        '2note',
+        '3note',
+        '4note',
+        '5note',
+        '6note',
+        '7note',
+        '8note',
+        '9note',
+        '10note',
+        '11note',
+        '12note',
+        '13note',
+        '14note',
+        '15note',
+        '16note',
+        '17note',
+      ],
+    },
+  },
 }

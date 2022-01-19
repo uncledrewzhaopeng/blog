@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Map 数据结构</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.3a05d700.css" as="style"><link rel="preload" href="/assets/js/app.9d471be1.js" as="script"><link rel="preload" href="/assets/js/2.bd8e4e64.js" as="script"><link rel="preload" href="/assets/js/37.0005c21d.js" as="script"><link rel="prefetch" href="/assets/js/10.cfaed2b0.js"><link rel="prefetch" href="/assets/js/11.dc380010.js"><link rel="prefetch" href="/assets/js/12.c9422487.js"><link rel="prefetch" href="/assets/js/13.c06c42a4.js"><link rel="prefetch" href="/assets/js/14.8bc62daa.js"><link rel="prefetch" href="/assets/js/15.8fe75647.js"><link rel="prefetch" href="/assets/js/16.b05c7178.js"><link rel="prefetch" href="/assets/js/17.ce851f5a.js"><link rel="prefetch" href="/assets/js/18.3733557a.js"><link rel="prefetch" href="/assets/js/19.3acc232e.js"><link rel="prefetch" href="/assets/js/20.46c13692.js"><link rel="prefetch" href="/assets/js/21.dd78fd62.js"><link rel="prefetch" href="/assets/js/22.fc4cbd8d.js"><link rel="prefetch" href="/assets/js/23.c8be1ba8.js"><link rel="prefetch" href="/assets/js/24.f3e41222.js"><link rel="prefetch" href="/assets/js/25.5b55ca12.js"><link rel="prefetch" href="/assets/js/26.e8f8d60c.js"><link rel="prefetch" href="/assets/js/27.0a1ad215.js"><link rel="prefetch" href="/assets/js/28.9864422a.js"><link rel="prefetch" href="/assets/js/29.92d0c5de.js"><link rel="prefetch" href="/assets/js/3.7fb96240.js"><link rel="prefetch" href="/assets/js/30.92f5b586.js"><link rel="prefetch" href="/assets/js/31.7a82cd79.js"><link rel="prefetch" href="/assets/js/32.547bda6f.js"><link rel="prefetch" href="/assets/js/33.e706bfba.js"><link rel="prefetch" href="/assets/js/34.501842c5.js"><link rel="prefetch" href="/assets/js/35.97c31be5.js"><link rel="prefetch" href="/assets/js/36.f33334f5.js"><link rel="prefetch" href="/assets/js/38.a126e71c.js"><link rel="prefetch" href="/assets/js/39.7c74d9b6.js"><link rel="prefetch" href="/assets/js/4.9126d6d1.js"><link rel="prefetch" href="/assets/js/40.774df0cc.js"><link rel="prefetch" href="/assets/js/41.43296a96.js"><link rel="prefetch" href="/assets/js/42.13af7f4b.js"><link rel="prefetch" href="/assets/js/43.eaf8a1e4.js"><link rel="prefetch" href="/assets/js/44.81f0c6d0.js"><link rel="prefetch" href="/assets/js/45.4a7fd7ad.js"><link rel="prefetch" href="/assets/js/46.cfafef89.js"><link rel="prefetch" href="/assets/js/47.77e9dd69.js"><link rel="prefetch" href="/assets/js/48.c7881de9.js"><link rel="prefetch" href="/assets/js/49.d62a79f6.js"><link rel="prefetch" href="/assets/js/5.a32e4dbf.js"><link rel="prefetch" href="/assets/js/50.9dbab16b.js"><link rel="prefetch" href="/assets/js/51.4fec4e3d.js"><link rel="prefetch" href="/assets/js/52.4d2a9466.js"><link rel="prefetch" href="/assets/js/53.4f9d3401.js"><link rel="prefetch" href="/assets/js/54.df9699e5.js"><link rel="prefetch" href="/assets/js/55.22d38471.js"><link rel="prefetch" href="/assets/js/56.a560408e.js"><link rel="prefetch" href="/assets/js/57.a066e8ee.js"><link rel="prefetch" href="/assets/js/58.8e126f80.js"><link rel="prefetch" href="/assets/js/59.ae34d564.js"><link rel="prefetch" href="/assets/js/6.e023c89a.js"><link rel="prefetch" href="/assets/js/60.55725bff.js"><link rel="prefetch" href="/assets/js/61.6d829f61.js"><link rel="prefetch" href="/assets/js/62.d1488474.js"><link rel="prefetch" href="/assets/js/63.8626c9d7.js"><link rel="prefetch" href="/assets/js/64.0f1cfcd1.js"><link rel="prefetch" href="/assets/js/65.dff908c0.js"><link rel="prefetch" href="/assets/js/66.87564629.js"><link rel="prefetch" href="/assets/js/67.c966cad7.js"><link rel="prefetch" href="/assets/js/68.7f7da03d.js"><link rel="prefetch" href="/assets/js/69.6d83ba9c.js"><link rel="prefetch" href="/assets/js/7.d076ff24.js"><link rel="prefetch" href="/assets/js/70.d4bb6a5c.js"><link rel="prefetch" href="/assets/js/71.38a5d9c5.js"><link rel="prefetch" href="/assets/js/72.dca48f78.js"><link rel="prefetch" href="/assets/js/73.61399040.js"><link rel="prefetch" href="/assets/js/74.bd4f5c1f.js"><link rel="prefetch" href="/assets/js/75.ef66f909.js"><link rel="prefetch" href="/assets/js/76.bc7a8ec6.js"><link rel="prefetch" href="/assets/js/77.90a6bcbd.js"><link rel="prefetch" href="/assets/js/8.44a562a0.js"><link rel="prefetch" href="/assets/js/9.e343e41f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3a05d700.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="es6-map-数据结构"><a href="#es6-map-数据结构" class="header-anchor">#</a> ES6 Map 数据结构</h1> <blockquote><p>js对象本质上是键值对的集合,但是只能用字符串作为键,虽然在定义的时候可以使用<code>Number</code>或者<code>Boolean</code>类型作为键名,但是却会改变它的类型</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>const obj = {
+  true:'value1',
+  2:'value2'
+}
+console.log(Object.keys(obj))  // [&quot;2&quot;, &quot;true&quot;]
+</code></pre></div><p>发现 obj 这个对象的key已经全部都变成了字符串,那么,当我们不想要改变这个key的类型的时候,有没有什么办法呢?有的,那就是今天我们的主人公 <code>Map</code> 以及它的兄弟 <code>WeakMap</code></p> <h2 id="map先来"><a href="#map先来" class="header-anchor">#</a> Map先来</h2> <p>话不多说,先来一波代码,直接copy到浏览器上去看效果.</p> <div class="language- extra-class"><pre class="language-text"><code>const keyName = {name:'key'}
+const arr = [
+  ['name','zhangsan'],
+  ['age',18],
+  [keyName,'kkk']
+]
+const map0 = new Map(arr)
+console.log(map0)  // {&quot;name&quot; =&gt; &quot;zhangsan&quot;, &quot;age&quot; =&gt; 18, {…} =&gt; &quot;kkk&quot;}
+
+const map = new Map()
+map.set('name','zhangsan')
+console.log(map)  // Map(1) {&quot;name&quot; =&gt; &quot;zhangsan&quot;}
+map
+  .set('prop1','value1')
+  .set('prop2','value')
+  .set('prop2','value2')
+console.log(map)  // Map(3) {&quot;name&quot; =&gt; &quot;zhangsan&quot;, &quot;prop1&quot; =&gt; &quot;value1&quot;, &quot;prop2&quot; =&gt; &quot;value2&quot;}
+console.log(map.has('prop2'))  // true
+console.log(map.has('prop3'))  // false
+console.log(map.get('prop2'))  // value2
+console.log(map.get('prop3'))  // undefined
+
+console.log(map.size)  // 3
+let isSuccess = map.delete('prop2')
+console.log(isSuccess)  // true
+let isSuccess2 = map.delete('prop3')
+console.log(isSuccess2)  // false
+
+console.log(map.size)  // 2
+let s = map.clear()
+console.log(map.size) // 0
+</code></pre></div><p>可以看出<code>Map</code>是一种数据结构.类似于对象,也是键值对的集合,但是键名的范围更加的广阔,所有的数据类型都可以.
+下面我们来一段一段分析以上的代码:</p> <h4 id="生成一个map"><a href="#生成一个map" class="header-anchor">#</a> 生成一个map</h4> <ol><li>方法1(实例化传参)</li></ol> <div class="language- extra-class"><pre class="language-text"><code>const keyName = {name:'key'}
+const arr = [
+  ['name','zhangsan'],
+  ['age',18],
+  [keyName,'kkk']
+]
+const map0 = new Map(arr)
+console.log(map0)  // {&quot;name&quot; =&gt; &quot;zhangsan&quot;, &quot;age&quot; =&gt; 18, {…} =&gt; &quot;kkk&quot;}
+</code></pre></div><p>这里是将一个二维数组当作参数在 <code>Map</code>实例化的时候传入,这是设置<code>Map</code>的一种方式.</p> <ol start="2"><li>方法2 (使用<code>Map</code>的 <em>set</em> 方法)</li></ol> <div class="language- extra-class"><pre class="language-text"><code>const map = new Map()
+map.set('name','zhangsan')
+console.log(map)  // Map(1) {&quot;name&quot; =&gt; &quot;zhangsan&quot;}
+map
+  .set('prop1','value1')
+  .set('prop2','value')
+  .set('prop2','value2')
+console.log(map)  // Map(3) {&quot;name&quot; =&gt; &quot;zhangsan&quot;, &quot;prop1&quot; =&gt; &quot;value1&quot;, &quot;prop2&quot; =&gt; &quot;value2&quot;}
+</code></pre></div><p>这里还可以看出 <code>Map</code>还支持链式调用,因为<em>set</em> 方法返回的是当前的Map对象</p> <h4 id="判断map中是否有某个属性"><a href="#判断map中是否有某个属性" class="header-anchor">#</a> 判断map中是否有某个属性</h4> <div class="language- extra-class"><pre class="language-text"><code>console.log(map.has('prop2'))  // true
+console.log(map.has('prop3'))  // false
+</code></pre></div><h4 id="获取map中的某个属性值"><a href="#获取map中的某个属性值" class="header-anchor">#</a> 获取map中的某个属性值</h4> <div class="language- extra-class"><pre class="language-text"><code>console.log(map.get('prop2'))  // value2
+console.log(map.get('prop3'))  // undefined
+</code></pre></div><h4 id="获取map中的长度"><a href="#获取map中的长度" class="header-anchor">#</a> 获取map中的长度</h4> <div class="language- extra-class"><pre class="language-text"><code>console.log(map.size)  // 3
+</code></pre></div><h4 id="删除map中的键值对"><a href="#删除map中的键值对" class="header-anchor">#</a> 删除map中的键值对</h4> <div class="language- extra-class"><pre class="language-text"><code>let isSuccess = map.delete('prop2')
+console.log(isSuccess)  // true
+let isSuccess2 = map.delete('prop3')
+console.log(isSuccess2)  // false
+</code></pre></div><p>返回一个<code>Boolean</code>类型的值,如果原本存在这个属性,那么删除成功后返回 <code>true</code>,否则返回 <code>false</code>
+此时再运行一下如下代码,发现结果已经变成2了,说明我们已经成功删除了一个键值对</p> <div class="language- extra-class"><pre class="language-text"><code>console.log(map.size)  // 2
+</code></pre></div><h4 id="清除map所有的键值对"><a href="#清除map所有的键值对" class="header-anchor">#</a> 清除map所有的键值对</h4> <div class="language- extra-class"><pre class="language-text"><code>let s = map.clear()
+console.log(map.size) // 0
+</code></pre></div><p>调用 <em>clear</em> 方法后再次查看map的长度,发现就变成0了</p> <h4 id="q-a-是否看上去长的一样的就是同一个键值对"><a href="#q-a-是否看上去长的一样的就是同一个键值对" class="header-anchor">#</a> Q&amp;A:是否看上去长的一样的就是同一个键值对?</h4> <div class="language- extra-class"><pre class="language-text"><code>map.set([1],1)
+console.log(map.get([1]))  // undefined
+const arr2 = [2]
+map.set(arr2,1)
+console.log(map.get(arr2))  // 1
+</code></pre></div><blockquote><p>由此可以看出,只有对同一个对象的引用,Map结构才将其视为同一个键, 上面中的 [1] 看似值是相同的,但是内存地址是不一样的.所以,Map的键实际上是和内存地址绑定的,不同的内存地址视为不同的键</p></blockquote> <h4 id="总结-map的方法和属性"><a href="#总结-map的方法和属性" class="header-anchor">#</a> 总结:<code>Map</code>的方法和属性</h4> <h5 id="方法"><a href="#方法" class="header-anchor">#</a> 方法</h5> <div class="language- extra-class"><pre class="language-text"><code>map.set(key,value)
+map.get(key)
+map.has(key)
+map.delete(key)
+map.clear()
+</code></pre></div><h5 id="属性"><a href="#属性" class="header-anchor">#</a> 属性</h5> <div class="language- extra-class"><pre class="language-text"><code>map.size
+</code></pre></div><h4 id="map的3个遍历器生成函数和1个遍历方法"><a href="#map的3个遍历器生成函数和1个遍历方法" class="header-anchor">#</a> Map的3个遍历器生成函数和1个遍历方法</h4> <div class="language- extra-class"><pre class="language-text"><code>const map = new Map([
+  ['name','zhangsan'],
+  ['age',18]
+])
+</code></pre></div><h5 id="keys"><a href="#keys" class="header-anchor">#</a> keys()</h5> <div class="language- extra-class"><pre class="language-text"><code>for (let key of map.keys()){
+  console.log(key)
+}
+// 'name'
+// 'age'
+</code></pre></div><h5 id="values"><a href="#values" class="header-anchor">#</a> values()</h5> <div class="language- extra-class"><pre class="language-text"><code>for (let value of map.values()){
+  console.log(value)
+}
+// 'zhangsan'
+// 18
+</code></pre></div><h5 id="entries"><a href="#entries" class="header-anchor">#</a> entries()</h5> <div class="language- extra-class"><pre class="language-text"><code>for (let item of map.entries()){
+  console.log(item)
+}
+// [&quot;name&quot;, &quot;zhangsan&quot;]
+// [&quot;age&quot;, 18]
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>for (let item of map){
+  console.log(item)
+}
+// [&quot;name&quot;, &quot;zhangsan&quot;]
+// [&quot;age&quot;, 18]
+</code></pre></div><p>上面最后两段代码可以看出 Map结构的默认遍历器接口就是 entries 方法</p> <h5 id="foreach-map-本身没有map和filter方法"><a href="#foreach-map-本身没有map和filter方法" class="header-anchor">#</a> forEach() (map 本身没有map和filter方法)</h5> <div class="language- extra-class"><pre class="language-text"><code>map.forEach((value, key, map) =&gt; {
+  console.log('key: %s, value: %s', key, value)
+})
+// key: name, value: zhangsan
+// key: age, value: 18
+</code></pre></div><h4 id="与其他数据结构的互转"><a href="#与其他数据结构的互转" class="header-anchor">#</a> 与其他数据结构的互转</h4> <ul><li>Map =&gt; Array</li></ul> <div class="language- extra-class"><pre class="language-text"><code>const arr = [...map]
+console.log(arr)  // [[&quot;name&quot;, &quot;zhangsan&quot;],[&quot;age&quot;, 18]]
+</code></pre></div><ul><li>Array =&gt; Map</li></ul> <div class="language- extra-class"><pre class="language-text"><code>const map2 = new Map(arr)
+console.log(map2)  // Map(2) {&quot;name&quot; =&gt; &quot;zhangsan&quot;, &quot;age&quot; =&gt; 18}
+</code></pre></div><ul><li>Map =&gt; Object</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// 如果Map的所有键都是字符串可以转为对象
+const obj = {}
+for(let [k,v] of map2){
+  obj[k] = v
+}
+console.log(obj)  // {name: &quot;zhangsan&quot;, age: 18}
+</code></pre></div><ul><li>Object =&gt; Map</li></ul> <div class="language- extra-class"><pre class="language-text"><code>let map3 = new Map()
+for(let k of Object.keys(obj)){
+  map3.set(k,obj[k])
+}
+console.log(map3)  // Map(2) {&quot;name&quot; =&gt; &quot;zhangsan&quot;, &quot;age&quot; =&gt; 18}
+</code></pre></div><h2 id="weakmap跟上"><a href="#weakmap跟上" class="header-anchor">#</a> WeakMap跟上</h2> <div class="language- extra-class"><pre class="language-text"><code>const wMap = new WeakMap()
+const obj = {}
+let valueObj = {name:'wang'}
+wMap.set(obj,valueObj)
+console.log(wMap.get(obj))  // {name: &quot;wang&quot;}
+wMap.set('name','lisi')  // Uncaught TypeError: Invalid value used as weak map key
+</code></pre></div><p>说明 WeakMap 的键不能是除了对象外的其他类型,否则会报错
+<strong>注意:</strong> <code>WeakMap()</code> 只有4个方法可用: <code>get()</code> <code>set()</code> <code>has()</code> <code>delete()</code>.这是因为某个键名是否存在是不确定的,和GC有关,所以没有 <code>size</code>属性,没有 <code>clear()</code>   也没有遍历的方法</p> <h2 id="与map的区别主要有两点"><a href="#与map的区别主要有两点" class="header-anchor">#</a> 与Map的区别主要有两点</h2> <blockquote><p>1.WeakMap的键只能是对象(null除外)
+2.WeakMap的键名所指向的对象不计入垃圾回收机制.即它的键名所引用的对象都是弱引用,只要所引用的对象的其他引用都被清除,GC就会释放该对象所占用的内存,不再需要手动删除引用</p></blockquote> <p>WeakMap的适用范围也是多样的,一个典型的例子就是可以注册监听事件,好处是一旦DOM对象消失,与之绑定的监听函数也就自动消失了,不再占用内存</p> <div class="language- extra-class"><pre class="language-text"><code>let div1 = document.querySelector('#div1')
+const listener = new WeakMap()
+function fn(){
+  console.log('click')
+}
+listener.set(div1,fn)
+div1.addEventListener('click',listener.get(div1))
+</code></pre></div><p><strong>注:</strong> 另有一篇文章 <a href="https://juejin.im/post/5e561a136fb9a07caf445c44" target="_blank" rel="noopener noreferrer">ES6 Set 数据结构<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 讲的主要是ES6中的另外一个新的数据结构<code>Set</code></p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.9d471be1.js" defer></script><script src="/assets/js/2.bd8e4e64.js" defer></script><script src="/assets/js/37.0005c21d.js" defer></script>
+  </body>
+</html>

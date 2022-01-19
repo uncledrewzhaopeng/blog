@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>with语法</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.3a05d700.css" as="style"><link rel="preload" href="/assets/js/app.9d471be1.js" as="script"><link rel="preload" href="/assets/js/2.bd8e4e64.js" as="script"><link rel="preload" href="/assets/js/38.a126e71c.js" as="script"><link rel="prefetch" href="/assets/js/10.cfaed2b0.js"><link rel="prefetch" href="/assets/js/11.dc380010.js"><link rel="prefetch" href="/assets/js/12.c9422487.js"><link rel="prefetch" href="/assets/js/13.c06c42a4.js"><link rel="prefetch" href="/assets/js/14.8bc62daa.js"><link rel="prefetch" href="/assets/js/15.8fe75647.js"><link rel="prefetch" href="/assets/js/16.b05c7178.js"><link rel="prefetch" href="/assets/js/17.ce851f5a.js"><link rel="prefetch" href="/assets/js/18.3733557a.js"><link rel="prefetch" href="/assets/js/19.3acc232e.js"><link rel="prefetch" href="/assets/js/20.46c13692.js"><link rel="prefetch" href="/assets/js/21.dd78fd62.js"><link rel="prefetch" href="/assets/js/22.fc4cbd8d.js"><link rel="prefetch" href="/assets/js/23.c8be1ba8.js"><link rel="prefetch" href="/assets/js/24.f3e41222.js"><link rel="prefetch" href="/assets/js/25.5b55ca12.js"><link rel="prefetch" href="/assets/js/26.e8f8d60c.js"><link rel="prefetch" href="/assets/js/27.0a1ad215.js"><link rel="prefetch" href="/assets/js/28.9864422a.js"><link rel="prefetch" href="/assets/js/29.92d0c5de.js"><link rel="prefetch" href="/assets/js/3.7fb96240.js"><link rel="prefetch" href="/assets/js/30.92f5b586.js"><link rel="prefetch" href="/assets/js/31.7a82cd79.js"><link rel="prefetch" href="/assets/js/32.547bda6f.js"><link rel="prefetch" href="/assets/js/33.e706bfba.js"><link rel="prefetch" href="/assets/js/34.501842c5.js"><link rel="prefetch" href="/assets/js/35.97c31be5.js"><link rel="prefetch" href="/assets/js/36.f33334f5.js"><link rel="prefetch" href="/assets/js/37.0005c21d.js"><link rel="prefetch" href="/assets/js/39.7c74d9b6.js"><link rel="prefetch" href="/assets/js/4.9126d6d1.js"><link rel="prefetch" href="/assets/js/40.774df0cc.js"><link rel="prefetch" href="/assets/js/41.43296a96.js"><link rel="prefetch" href="/assets/js/42.13af7f4b.js"><link rel="prefetch" href="/assets/js/43.eaf8a1e4.js"><link rel="prefetch" href="/assets/js/44.81f0c6d0.js"><link rel="prefetch" href="/assets/js/45.4a7fd7ad.js"><link rel="prefetch" href="/assets/js/46.cfafef89.js"><link rel="prefetch" href="/assets/js/47.77e9dd69.js"><link rel="prefetch" href="/assets/js/48.c7881de9.js"><link rel="prefetch" href="/assets/js/49.d62a79f6.js"><link rel="prefetch" href="/assets/js/5.a32e4dbf.js"><link rel="prefetch" href="/assets/js/50.9dbab16b.js"><link rel="prefetch" href="/assets/js/51.4fec4e3d.js"><link rel="prefetch" href="/assets/js/52.4d2a9466.js"><link rel="prefetch" href="/assets/js/53.4f9d3401.js"><link rel="prefetch" href="/assets/js/54.df9699e5.js"><link rel="prefetch" href="/assets/js/55.22d38471.js"><link rel="prefetch" href="/assets/js/56.a560408e.js"><link rel="prefetch" href="/assets/js/57.a066e8ee.js"><link rel="prefetch" href="/assets/js/58.8e126f80.js"><link rel="prefetch" href="/assets/js/59.ae34d564.js"><link rel="prefetch" href="/assets/js/6.e023c89a.js"><link rel="prefetch" href="/assets/js/60.55725bff.js"><link rel="prefetch" href="/assets/js/61.6d829f61.js"><link rel="prefetch" href="/assets/js/62.d1488474.js"><link rel="prefetch" href="/assets/js/63.8626c9d7.js"><link rel="prefetch" href="/assets/js/64.0f1cfcd1.js"><link rel="prefetch" href="/assets/js/65.dff908c0.js"><link rel="prefetch" href="/assets/js/66.87564629.js"><link rel="prefetch" href="/assets/js/67.c966cad7.js"><link rel="prefetch" href="/assets/js/68.7f7da03d.js"><link rel="prefetch" href="/assets/js/69.6d83ba9c.js"><link rel="prefetch" href="/assets/js/7.d076ff24.js"><link rel="prefetch" href="/assets/js/70.d4bb6a5c.js"><link rel="prefetch" href="/assets/js/71.38a5d9c5.js"><link rel="prefetch" href="/assets/js/72.dca48f78.js"><link rel="prefetch" href="/assets/js/73.61399040.js"><link rel="prefetch" href="/assets/js/74.bd4f5c1f.js"><link rel="prefetch" href="/assets/js/75.ef66f909.js"><link rel="prefetch" href="/assets/js/76.bc7a8ec6.js"><link rel="prefetch" href="/assets/js/77.90a6bcbd.js"><link rel="prefetch" href="/assets/js/8.44a562a0.js"><link rel="prefetch" href="/assets/js/9.e343e41f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3a05d700.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="with语法"><a href="#with语法" class="header-anchor">#</a> with语法</h1> <blockquote><p>这两天在干活的时候,遇到了这么一个业务场景.就是后台接口返回的数据中有不少字段是我不需要的,而我只想保留几个我想要的数据字段,不想要整个对象赋值.</p></blockquote> <p>我们假设后台返回的数据如下:</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;code&quot; : &quot;200&quot;,
+  &quot;msg&quot; : &quot;操作成功&quot;,
+  &quot;data&quot; : {
+    &quot;name&quot;: &quot;zhangsan&quot;,
+    &quot;age&quot;: 12,
+    &quot;job&quot;: &quot;FE developer&quot;,
+    &quot;like&quot;: &quot;football&quot;
+  },
+  &quot;hasError&quot; : false
+}
+</code></pre></div><p>按照以前的做法,管它三七二十一,全给我拿来.直接把整个对象赋值给<code>myData</code></p> <div class="language- extra-class"><pre class="language-text"><code>aInterface().then(res =&gt; {
+    this.myData = res.data.data
+})
+</code></pre></div><p>然后在模板中使用:</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div&gt;
+    &lt;ul&gt;
+      &lt;li v-for=&quot;prop in myData&quot;&gt;
+        {{prop}}
+      &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre></div><p>而我现在只想要 <code>name</code>  和 <code>age</code> 这两个字段,上面的做法会将所有的属性值全部打印出来.所以,我采用的赋值方法一般是</p> <div class="language- extra-class"><pre class="language-text"><code>aInterface().then(res =&gt; {
+    const data = res.data.data
+    this.myData.name = data.name
+    this.myData.age = data.age
+})
+</code></pre></div><p>但是这样的写法就显得有点繁琐了,每次都要写 <code>this.myData</code> 这个变量了.此时想起了以前看到过的有个叫 <code>with</code> 的语句,语法是这样的:</p> <div class="language- extra-class"><pre class="language-text"><code>const obj = {
+  name:'zhangsan',
+  age:12
+}
+console.log(obj)  // {name: &quot;zhangsan&quot;, age: 12}
+
+obj.name = 'lisi'
+obj.age = 15
+console.log(obj)  // {name: &quot;lisi&quot;, age: 15}
+
+with(obj){
+  name = 'wangwu'
+  age = 18
+  job = 'fe'
+}
+console.log(obj)  // {name: &quot;wangwu&quot;, age: 18}
+</code></pre></div><p><code>obj.a = 11</code> 这种是我们最常见的给对象里面属性赋值的方式,而 <code>with</code> 后面跟了一个表达式 <code>obj</code> , 花括号里面的语句就只需要 <code>a = 111</code> 这样的赋值方式,感觉是可以少写一点代码了. 那么我们可以看出,其实 <code>with</code> 关键字改变了里面语句的作用域,在 <code>with</code> 代码块内部,变量会先被认为是一个局部变量,如果某个变量名与表达式 <code>obj</code> 中的一个属性名是一样的,那么这个局部变量就会指向 <code>obj</code> 对象中同名属性.但假如 <code>obj</code> 中没有一个属性名是与代码块中的局部变量的名字是一样的,那么此时就会发生污染全局变量的现象.不知道小伙伴们是否注意到了,上面的代码中,在代码块的最后,我加了 <code>job = 'fe'</code> 这样的一句语句.但是,console 控制台打印出来的 <code>obj</code> 中并没有包含这个属性.这就是因为此时的 <code>job</code> 这个变量已经泄漏到了全局作用域中了,我们可以继续在控制台执行下面代码</p> <div class="language- extra-class"><pre class="language-text"><code>console.log(job === window.job)  // true
+</code></pre></div><p>会发现结果是 <code>true</code> ,证明此时 <code>job</code> 已经是全局变量了.这就是 <code>with</code> 的其中一个弊端,容易数据泄漏,污染全局.而 <code>with</code> 的另外一个缺点就是会导致性能下降.我们来运行如下代码,然后在控制台查看运行结果:</p> <div class="language- extra-class"><pre class="language-text"><code>function test(){
+  console.time('test')
+  const obj = {
+    a:1
+  }
+  for(let i = 0;i &lt; 99999; i++){
+    const tmp = obj.a
+  }
+  console.timeEnd('test')
+}
+test()  // test: 1.2958984375ms
+
+function testWith(){
+  console.time('testWith')
+  const obj = {
+    a:1
+  }
+  with(obj){
+    for(let i = 0;i &lt; 99999; i++){
+      const tmp = a
+    }
+  }
+  
+  console.timeEnd('testWith')
+}
+testWith()  // testWith: 12.7939453125ms
+</code></pre></div><p><strong>注意:</strong> <code>console.time()</code> 方法是作为计算器的起始方法, <code>console.timeEnd()</code>方法作为计算器的结束方法 . 两个方法配合使用,一般是用来测试一段程序执行的时长.所以,这里两个函数的运行结果很可能是每次都不一样的,但是每次偏差应该都不会相差太大.由此,我们可以看出使用了 <code>with</code> 语句的代码所需要的时间更长.是没有使用with语句的好多倍.这是因为JavaScript引擎在编译阶段就进行一些性能优化,比如在执行之前就确定了一些变量的定义位置,然后在代码真正的执行过程中可以快速的找到标识符,而使用了 <code>with</code> 之后,因为无法知道传递到<code>with</code> 中的对象是哪个,所以JavaScript引擎它也会很懵逼,然后选择放弃,不做优化.</p> <p><strong>总结:</strong>
+我们代码中尽量不推荐使用 <code>with</code> 语句,并且在ES5严格模式中已经禁止该标签.但假如真的很想要用它的话,那么在 <code>with</code> 代码块的语句中,尽量使用指定对象的属性作为变量名,至少我们要保证尽量的不污染全局.</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.9d471be1.js" defer></script><script src="/assets/js/2.bd8e4e64.js" defer></script><script src="/assets/js/38.a126e71c.js" defer></script>
+  </body>
+</html>
