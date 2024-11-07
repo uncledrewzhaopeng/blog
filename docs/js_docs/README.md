@@ -4,7 +4,7 @@ date: 2020-12-28
 categories:
   - node_docs
 tags:
-  - Node
+  - JS
 ---
 
 JavaScript 是一种动态弱类型语言.作为开发 Web 页面的脚本语言而出名,但目前已经被用到了很多非浏览器环境.

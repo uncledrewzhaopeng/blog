@@ -7,187 +7,316 @@ tags:
   - OTHER
 ---
 
-<!-- # Git常用指令 -->
+### 集中式、分布式？有什么区别
 
-## 项目初始化
+> 集中式：完整的代码库在中央服务器，每次上班都需要重新下载一下当前的版本,当成一个图书馆，每次借书，完成工作之后还书，最大的毛病应该就是必须联网才能工作。
 
-```
-git init
-```
+> 分布式：没有"中央服务器"每一个人的代码都是一个完整的代码库，这样工作的时候就不需要联网了。
 
-项目初始化之后会生成一个.git 文件,如果看不见,可能是因为电脑隐藏了以.开头的文件
+### 设置用户名邮箱
 
-## 项目关联
+```js
+查看当前库的用户名和邮箱命令
+git config user.name
+git config user.email
 
-### 克隆项目
+设置当前库的用户名和密码
+git config user.name "Eddie"
+git config user.email "xxx@163.com"
 
-```
-git clone xxxx // xxxx 表示项目地址
-```
-
-表示从远程仓库拉取项目到本地
-
-### 本地项目关联远程仓库
-
-如果我们本地是有项目的,我们想要的是将本地的项目和远程仓库关联起来,那么有如下两种情况
-
-- 本地已有文件与 git 仓库关联起来(空仓库)
-- 本地已有文件与 git 仓库关联起来(非空仓库:比如有 README.md)
-
-我们先来看第一种,它的流程是这样的:
-
-```
-git init
-git remote add origin xxxx
-git add .
-git commit -m 'init'
-git push --set-upstream origin master 或者 git push -u origin master
+设置全局的用户名和密码
+git config --global user.name "Eddie"
+git config --global user.email "xxx@163.com"
 ```
 
-第二种非空仓库的情况:
+### 初始化仓库
 
+使用`git init`
+
+添加文件到 Git 仓库，分两步
+
+1.使用`git add <filePath>`，可反复多次使用，添加多个文件
+
+2.使用`git commit`,提交到版本库，完成
+
+### 查看仓库状态
+
+- 要随时掌握工作区的状态，使用`git status`命令
+- 如果`git status`告诉你有文件被修改，用`git diff`可以查看修改的内容
+
+### 版本回退
+
+- `HEAD`指向的版本就是当前版本的，因此 Git 允许我们在版本的历史之间穿梭，使用命令
+
+  `git reset --hard commit_id`
+
+- 穿梭前，用`git log`可以查看提交历史（commit_id），可以确定要回退到哪个版本
+
+- 要重返未来，用`git reflog`查看历史命令，以便确定要回到未来的哪个版本
+
+- `git log --pretty=oneline` 将历史信息，一行显示
+
+  ```js
+  git reset --hard HEAD^ 指针，返回上一次
+  ```
+
+### 了解工作区和暂存区
+
+**i ecs :wq 退出**
+
+工作区-----> 暂存区-------> 分支 -----> 远程仓库
+
+我们开发的地方就叫做工作区 git status 查看暂存区的状态
+
+工作区 ---> 暂存区 ----> 分支 ---> 远程库
+
+工作区就是我们可以在工作目录中可以看到的，并且可以直接修改的
+
+第一步是用 git add 把文件添加进去，实际上就是把文件修改添加到暂存区；
+
+第二步是用 git commit 提交更改，实际上就是把暂存区的所有内容提交到当前分支
+
+### 情景分析
+
+**情景一**：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，使用命令`git checkout -- <file>`
+
+**情景二**:当你不但改乱了工作区的内容，还 add 到了暂存区，想丢弃修改，分两步第一步用命令`git reset HEAD <file>`,就回到了情景一，第二步按情景一操作。
+
+**情景三**： 已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退，不过前提是没有推送到远程仓库
+
+```js
+放弃修改，当你已经add了a文件之后，然后又去修改了a文件，这时你commit -m之后，去查看 git status 会发现是修改了的，然后这时如果你不想要了之后，可以使用 git checkout -- <a文件的名字>
+这时再去查看 git status会发现是干净的，就会将文件中之后修改的东西去删除。
 ```
-git init
-git remote add origin xxxx
-git add .
-git commit -m 'init'
+
+已经在工作区的内容要丢弃的时候使用 git checkout -- a.txt
+
+如果是已经提交到暂存区的再来丢弃的时候 那么要使用 git reset HEAD test.txt 再来使用 checkout -- a 丢弃
+
+### 删除文件
+
+命令`git rm`用于删除一个文件，如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失**最近一次提交后你修改的内容**
+
+`rm 2.txt`这个和手动删除是一样的，这时可以使用`git status`来查看一下最近的一次修改，他有两个提示
+
+```js
+(use "git add/rm <file>..." to update what will be committed)
+(use "git checkout -- <file>..." to discard changes in working directory)
+正常删除   1.删除文件  2. git rm <file>
+删错了   1. git reset HEAD 2.txt  2. git checkout -- 2.txt
+```
+
+### 远程仓库
+
+`$ ssh-keygen -t rsa -C "937741304@qq.com"` 先生成秘钥然后在复制到 github 上面
+
+这个公钥原来弄一次就可以了，github 上面是识别本地的
+
+github 上面原来有那两条命令的是
+
+关联远程仓库
+
+`git remote add origin git@github.com:zzz111111/test.git`
+
+推送到远程仓库
+
+`git push -u origin master` (就第一次提交的时候需要带上 -u，以后都不需要带了)
+
+`git push origin master`
+
+**解绑远程仓库**
+
+`git remote remove origin`
+
+**查看链接的哪个远程仓库**
+
+`git remote -v`
+
+### 克隆远程仓库
+
+`$git clone + 那个ssh的名字`
+
+### 创建与合并分支
+
+每次提交，Git 都把他们串成一条时间线，这条时间线就是一个分支。
+
+截止到目前，只有一条时间线，在 Git 里，这个分支叫主分支，即 master 分支
+
+`HEAD`严格来说不是指向提交，而是指向`master`,`master`才是指向提交的，所以，`HEAD`指向的就是当前分支
+
+**姿势来了**
+
+Git 鼓励大量使用分支, 分支 开发新功能的时候会在分支上开发
+
+查看分支： `git branch`
+
+创建分支： `git branch <name>`
+
+切换分支： `git checkout <name>`
+
+创建+切换分支： `git checkout -b <name>`
+
+合并某分支到当前分支： `git merge <name>` 把 name 整合到当前分支
+
+删除分支： `git branch -D <name>` `git branch -d <name>这个 -d 合并后才可以删除`
+
+```js
+现在新增加的文件 切换到主分支就会消失  在切换回来就会出现
+切换到主分支  整合   选择要整合到的分支选择到他 然后整合其他的分支
+```
+
+### 分支冲突
+
+当在分支上面新增提交，又在`master`上面新增提交之后，合并就会发生冲突，只能手动解决。
+
+当 Git 无法自动合并分支时，就必须首先解决冲突。解决完冲突后，再提交，合并完成。
+
+用`git log --graph`命令可以看到分支合并图
+
+### 分支的管理策略
+
+合并分支时，加上`--no-ff参数`就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而
+
+`fast forward`合并就看不出来曾经做过合并。
+
+```js
+git merge --no-ff test1
+```
+
+注意：使用`--no-ff`合并时会自动创建一个新的 commit。所以要加上-m 并写上错误。
+
+### BUG 分支
+
+修复 bug 时，我们会通过创建新的 bug 分支进行修复，然后合并，最后删除
+
+当手头工作没有完成时，先把工作现场`git stash`一下，然后去修复 bug，修复后，再`git stash pop`,回到工作现场
+
+```git
+git stash apply 恢复环境
+git stash drop 删除
+git stash pop 保存并恢复环境
+```
+
+### Feature 分支
+
+开发一个新功能，最好新建一个分支
+
+如果要丢弃一个没有被合并过的分支，可以通过 `git branch -D <name>`强行删除
+
+### 多人协作
+
+- 查看远程库信息，使用`git remote -v`
+- 本地新建的分支如果不推送到远程，对其他人就是不可见的
+- 从本地推送分支，使用`git push origin branch-name`,如果推送失败，先用`git pull`抓取远程的新提交
+- 在本地创建和远程分支对应的分支，使用`git checkout -b branch-name origin/branch-name`，本地和远程分支的名称最好一致
+- 建立本地分支和远程分支的关联，使用`git branch --set-upstream branch-name origin/branch-name`
+- 从远程抓取分支，使用`git pull`,如果有冲突，要先处理冲突
+
+### 标签管理
+
+发布一个版本时，我们通常在版本库中打一个标签（tag），这样，就唯一确定了打标签时刻的版本，将来无论什么时候，或某个标签的版本，就是把那个打标签的时刻的历史版本取出来。所以，标签也是版本库的一个快照。
+
+### 创建标签
+
+- 命令`git tag <name>`,用于新建一个标签，默认为`HEAD`，也可以指定一个`commit_id`
+- `git tag -a <tagname> -m "blablabla.."` 可以指定标签信息
+- `git tag -a <tagname> -m "blabla.."`可以用 PGP 签名签名
+- 命令`git tag`可以查看所有标签
+- 用命令`git show <tagname>`可以看到说明文字
+
+```js
+$ git tag -a v-1.0.0 -m "第二次tag" cf1e9dee085dd2138b1ab83704e9bd521e3d08b1
+```
+
+### 操作标签
+
+因为创建的标签都只存储在本地，不会自动推送到远程，所以，打错的标签可以在本地安全删除
+
+- 删除标签`git tag -d <tagName>`
+
+- 如果要推送某个标签到远程，使用命令`git push origin <tagname>`
+
+  或者一次性推送所有尚未推送到远程的标签`git push origin --tags`
+
+- 如果标签已经推送到远程，需要删除远程标签：先从本地删除
+
+  ```js
+  $git tag -d <tagName>
+  ```
+
+  然后删除远程库，使用命令 push，但是格式如下
+
+  ```js
+  $git push origin :regs/tags/<tagName>
+  ```
+
+  需要查看远程标签是否删除，登录 GitHub 查看
+
+### 配置 Git 命令别名
+
+我们只需要敲一行命令，告诉 Git，以后`st`就表示`status`
+
+`git config --global alias.st status`
+
+```js
+/全局配置用户名和邮箱
+git config --global user.name "Eddie"
+git config --global user.email "972012113@qq.com"
+//查看用户名
+git config user.name
+//查看邮箱地址
+git config user.email
+//修改用户名，xxx 处填写你的用户名
+git config user.name "xxx"
+//修改邮箱地址，xxx 处填写你的邮箱地址
+git config user.email "xxx"
+
+$ls 查看当前目录
+$ls -a 可以查看隐藏文件
+```
+
+```js
+git init 初始化吧 自己的理解创建一个 那个框框
+git add . 放到暂存区
+git commit -m "提交状态信息"   放到分支     	branch分支
+git log 查看记录
+$ git remote add origin git@github.com:zzz111111/goudan.git   关联本地仓库和远程仓库
+$ git pull origin master 拉下来  先看看和远程仓库的一样不一样
+$ git push origin master	把我本地的master分支 推送到远程代码仓库master     yes  第一次使用可能要确定
+关联后，使用命令git push -u origin master第一次推送master分支的所有内容
+$ ssh-keygen -t rsa -C "972012113@qq.com"		先生成秘钥然后在复制到github上面
+先  pull再 add        先pull
+	git pull
+$git pull origin master先更新在推送的感觉 就是如果其他人先推了  你就先下载下来 可能是下载下来 然后再推
+```
+
+```js
+/报错信息一
+fatal: refusing to merge unrelated histories
+
+解决方法
 git pull origin master --allow-unrelated-histories
-//若有冲突,先解决冲突
-git push --set-upstream origin master
 ```
 
-可以看出来这两种情况只有在第 5 步的时候才是有区别的.
+小问题去试验
 
-在上面的 commit 到本地仓库后,如果直接推送,它会报错:
-
-```
-refusing to merge unrelated histories
-```
-
-意思就是拒绝合并没有历史关系的分支,我们用下面的代码解决这个问题
-
-```
-git pull origin master --allow-unrelated-histories
+```js
+https://blog.csdn.net/u013485584/article/details/53319044
+https://blog.csdn.net/HeatDeath/article/details/79501748
 ```
 
-我们允许拉取没有历史关系的分支,这步也就是我们代码的第 5 步
+### 忽略不上传的文件
 
-## 分支操作
-
-### 查看分支
-
-```
-git branch  //查看本地分支
-git branch -r //远程分支
-git branch -a  //本地+远程
-git brnahc -v  //分支最后一次提交的信息
+```html
+增加 .gitignore 文件，里面添加需要忽略的文件(file_not_wanted) 执行命令 git rm -r --cached .
+注意，最后的点。不要省略。 最后重新将所有文件添加到追踪项。 git add -A 然后再 commit 即可。
 ```
 
-在实际项目开发中,往往会有多个任务并行开发,因此从一个基础分支拉取不同分支进行代码编写是常有的事情.
+### 在不同的分支中更新同样的代码
 
-### 切换分支
+```git
+在其他分支中 commit之后，会得到一个 commitid
 
+切换到想要修改的分支之下
+git cherry-pick commitid 就会更新
 ```
-git branch <BranchName>  //  创建本地分支
-git checkout <BranchName> //切换到对应分支
-git checkout -b<BranchName>r  //创建并切换到对应分支
-```
-
-### 拉取分支
-
-将远程 git 仓库里的指定分支拉取到本地（本地不存在的分支）
-
-```
-git checkout -b 本地分支名 origin/远程分支名
-```
-
-### 删除分支
-
-```
-git branch -d <BranchName>  //删除本地分支
-git push origin :<BranchName>(origin后面有空格)  //删除远程分支
-```
-
-### 创建本地新分支并推送到远程
-
-```
-git checkout -b branch1 //创建本地新分支并切换到对应的分支
-git push --set-upstream origin branch1
-```
-
-### 暂存
-
-有时候,我们想要切换分支,但是又不想将当前分支代码提交到本地或远程仓库,直接切换过去的话代码会被覆盖,这时候我们可以使用暂存功能
-
-```
-git stash //存
-git stash pop //取出暂存
-```
-
-## 提交操作
-
-### 代码提交
-
-```
-git add .
-git commit -m 'commit message'
-git push
-```
-
-提交的时候,可以输入 emoji 表情,可爱又有趣,别人一眼看过来就知道你提交的是关于什么
-
-```
-:bug: //修复BUG
-:lipstick: //更新样式
-:lock: //解决安全问题
-:recycle: //重构
-:sparkles: //添加新功能
-```
-
-### 查看提交历史
-
-```
-git log
-git log -3 //显示最近3次的更新
-```
-
-### 本地代码回滚
-
-```
-git reset --hard commit-id //回滚到commit-id
-git reset --hard HEAD~3 //将最近三次的提交回滚
-git reset --hard HEAD^ //将本地代码回退到上一个版本
-```
-
-### 标签功能
-
-有时候,我们的项目上线了,我们就需要标签功能,记录我们的版本
-
-```
-git tag //显示已有的标签
-git tag v1.0.1 //创建一个轻量级标签
-git tag -a v1.0.2 -m ‘release version’ //创建一个带有标注的标签
-git tag -d tag_name //删除标签
-git push //并不会把tag标签传送到远端服务器上,只有通过显式命令才能分享标签到远端仓库
-git push origin tag_name //push单个tag
-git push origin --tags //推送所有本地新增的标签
-```
-
-## 配置
-
-### config 配置
-
-最后我们来说一下 config 配置
-
-```
-git config --global user.name  //查看全局配置的用户名
-git config --global user.email  //查看全局配置的邮箱
-git config --global user.name 'zhangsha'  //配置全局的用户名
-git config --global user.email 'xx@xx.com'  //配置全局的邮箱
-//下面是针对单独的项目进行配置和查看
-git config user.name 'lisi'  //配置当前项目的用户名
-git config user.name  //查看当前项目的用户名
-git config --list  //查看多个配置
-```
-
-配置分为全局配置和项目配置,没有对项目进行单独配置的时候,会默认使用全局的配置.如果我们在一个项目中进行了单独的配置,那么就会使用项目中配置.这个选项在你切换不同项目(比如公司和个人项目)的时候,可以起到一定的作用.

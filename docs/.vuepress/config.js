@@ -2,12 +2,19 @@ module.exports = {
   theme: 'reco',
   title: 'Eddie-Blog',
   keywords: '前端开发',
-  description: '自己有决心并且付出精力是成功的先决条件',
+  // description: '自己有决心并且付出精力是成功的先决条件',
+  description: ' ',
   repo: 'https://github.com/uncledrewzhaopeng/blog.git',
-  // base: '/blog/',
-  base: '/',
+  // base: '/blog/', // 部署到github pages需配置这个路径
+  base: '/blog/', // 部署到服务器需配置这个路径
   head: [
-    ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
+    [
+      'meta',
+      {
+        name: 'viewport',
+        content: 'width=device-width,initial-scale=1,user-scalable=no',
+      },
+    ],
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     // 引入jquery
     [
@@ -43,6 +50,12 @@ module.exports = {
     authorAvatar: '/img/My.jpg',
     type: 'blog',
     logo: '/img/logo.png',
+    // ICP备案
+    record: '赣ICP备2023005928号',
+    recordLink: 'https://beian.miit.gov.cn',
+    // 公安备案
+    // cyberSecurityRecord: '公安部备案文案',
+    // cyberSecurityLink: '公安部备案指向链接',
     // 评论
     valineConfig: {
       appId: 'ns5dzf0Yo2oTFbuVzVt3cL4b-gzGzoHsz', // your appId
@@ -52,24 +65,28 @@ module.exports = {
     blogConfig: {
       category: {
         location: 2, // 在导航栏菜单中所占的位置，默认2
-        text: '分类', // 默认文案 “分类”
+        text: 'Category', // 默认文案 “分类”
       },
       tag: {
         location: 3, // 在导航栏菜单中所占的位置，默认3
-        text: '标签', // 默认文案 “标签”
+        text: 'Tag', // 默认文案 “标签”
       },
     },
     nav: [
-      { text: '首页', link: '/', icon: 'reco-home' },
-      { text: '时间轴', link: '/timeline/', icon: 'reco-date' },
+      { text: 'Home', link: '/', icon: 'reco-home' },
+      { text: 'Timeline', link: '/timeline/', icon: 'reco-date' },
       // { text: 'JS', link: '/js_docs/' },
       // { text: 'CSS', link: '/css_docs/' },
       // { text: 'Vue', link: '/vue_docs/' },
       // { text: 'Node', link: '/node_docs/' },
-      { text: '项目笔记', link: '/note/', icon: 'reco-suggestion' },
-      { text: '计划', link: '/plan/', icon: 'reco-coding' },
-      { text: '其它', link: '/other/', icon: 'reco-other' },
-      { text: 'GitHub', link: 'https://github.com/uncledrewzhaopeng', icon: 'reco-github' },
+      { text: 'Note', link: '/note/', icon: 'reco-suggestion' },
+      { text: 'Plan', link: '/plan/', icon: 'reco-coding' },
+      { text: 'Other', link: '/other/', icon: 'reco-other' },
+      {
+        text: 'GitHub',
+        link: 'https://github.com/uncledrewzhaopeng',
+        icon: 'reco-github',
+      },
     ],
     // sidebar: "auto",
     sidebar: {
@@ -146,7 +163,33 @@ module.exports = {
         '15note',
         '16note',
         '17note',
+        '18note',
       ],
     },
   },
+
+  plugins: [
+    ['@vuepress/nprogress'],
+
+    [
+      '@vuepress-reco/vuepress-plugin-bgm-player',
+      {
+        audios: [
+          {
+            name: '希望像星光一样闪烁',
+            artist: '文雀',
+            url: 'http://music.163.com/song/media/outer/url?id=1831469103',
+            cover:
+              'http://p2.music.126.net/qXzsZmfQ-nMWFxRzTSUwbw==/109951166583572934.jpg?param=130y130',
+          },
+        ],
+        // 是否默认缩小
+        autoShrink: true,
+        // 缩小时缩为哪种模式
+        shrinkMode: 'float',
+        // 悬浮窗样式
+        floatStyle: { bottom: '10px', 'z-index': '999999' },
+      },
+    ],
+  ],
 }

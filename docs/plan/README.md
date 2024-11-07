@@ -2,9 +2,9 @@
 title: 关于计划
 date: 2021-04-16
 categories:
-  - other_docs
+  - plan_docs
 tags:
-  - OTHER
+  - PLAN
 ---
 
 > 凡事预则立 不预则废
