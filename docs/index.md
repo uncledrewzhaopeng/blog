@@ -20,3 +20,5 @@ features:
   - title: 计划与随笔
     details: 持续整理实践中的想法与问题。
 ---
+
+<BlogArchive mode="latest" :limit="8" />

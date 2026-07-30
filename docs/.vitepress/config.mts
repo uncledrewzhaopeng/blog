@@ -23,6 +23,9 @@ export default defineConfig({
     logo: '/img/logo.png',
     nav: [
       { text: '首页', link: '/' },
+      { text: '时间线', link: '/timeline/' },
+      { text: '分类', link: '/categories/' },
+      { text: '标签', link: '/tags/' },
       { text: '笔记', link: '/note/' },
       { text: '计划', link: '/plan/' },
       { text: '其他', link: '/other/' },
