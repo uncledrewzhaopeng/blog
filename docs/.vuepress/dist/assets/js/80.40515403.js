@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[80],{509:function(t,n,s){"use strict";s.r(n);var o=s(2),e=Object(o.a)({},(function(){var t=this._self._c;return t("ContentSlotsDistributor",{attrs:{"slot-key":this.$parent.slotKey}},[t("blockquote",[t("p",[this._v("凡事预则立 不预则废\n(做任何事情，事前有准备就可以成功，没有准备就会失败)")])])])}),[],!1,null,null,null);n.default=e.exports}}]);

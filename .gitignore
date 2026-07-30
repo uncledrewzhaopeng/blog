@@ -1,6 +1,8 @@
 .DS_Store
 node_modules/
 /dist/
+/docs/.vitepress/dist/
+/docs/.vitepress/cache/
 npm-debug.log*
 yarn-debug.log*
 /test/unit/coverage/
