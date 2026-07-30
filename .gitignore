@@ -1,18 +1,31 @@
-.DS_Store
+# build output
+dist/
+
+# generated types
+.astro/
+
+# dependencies
 node_modules/
-/dist/
-/docs/.vitepress/dist/
-/docs/.vitepress/cache/
+
+# logs
 npm-debug.log*
 yarn-debug.log*
-/test/unit/coverage/
-/test/e2e/reports/
-selenium-debug.log
+yarn-error.log*
+pnpm-debug.log*
 
-# Editor directories and files
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+.vercel
+
+package-lock.json
+bun.lockb
+yarn.lock
+
+# ide
 .idea
-.vscode
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
+*.iml
