@@ -2,10 +2,10 @@
 set -e
 
 # 生成静态文件
-yarn build
+npm run build
 
 # 进入生成的文件夹，这里是默认的路径，可以自定义
-cd docs/.vuepress/dist
+cd docs/.vitepress/dist
 
 # 如果是发布到自定义域名
 # echo '106.55.14.44' > CNAME

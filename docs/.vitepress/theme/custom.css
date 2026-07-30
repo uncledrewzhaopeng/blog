@@ -1,0 +1,28 @@
+:root {
+  --vp-c-brand-1: #0d8fbf;
+  --vp-c-brand-2: #087da8;
+  --vp-c-brand-3: #066b90;
+}
+
+.VPHomeHero .image-bg {
+  background-image: linear-gradient(135deg, #0d8fbf80, #42b88380);
+}
+
+.VPHomeHero .image-container img {
+  border-radius: 50%;
+}
+
+.vp-doc blockquote {
+  margin-left: 0;
+  padding-left: 1rem;
+  color: #6b7280;
+}
+
+summary {
+  margin-top: 0.2rem;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #75826b42;
+  border-radius: 5px;
+}
