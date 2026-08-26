@@ -1,9 +1,11 @@
 ---
 title: "函数防抖和节流"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "函数的防抖和节流在我们的工作中经常会用到,在面试中也经常会出现.因此今天我们来聊聊防抖和节流"
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # 函数防抖和节流 -->

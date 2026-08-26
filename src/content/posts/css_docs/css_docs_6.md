@@ -1,9 +1,10 @@
 ---
 title: "三角形(triangle)的css画法"
-published: 2020-12-28
-category: "CSS"
-tags: ["CSS"]
+pubDatetime: 2020-12-28
+description: ".right { width: 0; height: 0; border-top: 40px solid transparent; border-bottom: 40px solid transparent; border-left: 80px solid skyblue; }"
 draft: false
+tags:
+  - "CSS"
 ---
 
 <!-- # 三角形(triangle)的css画法 -->

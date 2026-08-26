@@ -1,9 +1,11 @@
 ---
 title: "new的时候干了啥"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "new在MDN上的定义是:new 运算符创建一个用户定义的对象类型的实例或具有构造函数的内置对象的实例"
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # new的时候干了啥 -->

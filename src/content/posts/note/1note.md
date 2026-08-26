@@ -1,9 +1,11 @@
 ---
 title: "Vue+Vant ui实现图片预览"
-published: 2020-02-27
-category: "笔记"
-tags: ["NOTE"]
+pubDatetime: 2020-02-27
+description: "Vant 图片预览"
 draft: false
+tags:
+  - "NOTE"
+  - "笔记"
 ---
 
 [Vant 图片预览](https://youzan.github.io/vant/#/zh-CN/image-preview)

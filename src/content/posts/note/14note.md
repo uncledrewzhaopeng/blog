@@ -1,9 +1,11 @@
 ---
 title: "正则捕获的实现方法"
-published: 2021-02-23
-category: "笔记"
-tags: ["NOTE"]
+pubDatetime: 2021-02-23
+description: "// 如上所述的一样，我们当前replace执行两次，相当于第二个参数function也执行两次 // 在每一次function执行的时候，在函数中return后面返回的是啥，就是把大正则捕获的内容替换成啥 str = str.replace(/peng/g, function(content, index, i..."
 draft: false
+tags:
+  - "NOTE"
+  - "笔记"
 ---
 
 #### exec 正则用来捕获的一个方法

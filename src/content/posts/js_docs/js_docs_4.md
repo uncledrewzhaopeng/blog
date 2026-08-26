@@ -1,9 +1,11 @@
 ---
 title: "with语法"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "这两天在干活的时候,遇到了这么一个业务场景.就是后台接口返回的数据中有不少字段是我不需要的,而我只想保留几个我想要的数据字段,不想要整个对象赋值."
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # with语法 -->

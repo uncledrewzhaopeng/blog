@@ -1,9 +1,11 @@
 ---
 title: "原型和原型链"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "相信大家肯定见过下面这几个单词,但是有时候又是傻傻分不清楚,不知道这几个单词到底是做啥的,又有啥区别.今天我们就来好好的瞧一瞧,剖析剖析它们.它们分别是 prototyoe, proto, constructor."
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # 原型和原型链 -->

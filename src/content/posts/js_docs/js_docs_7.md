@@ -1,9 +1,11 @@
 ---
 title: "js中容易忽略的参数"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "parseInt()函数可解析一个字符串,并返回一个整数 语法:"
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # js中容易忽略的参数 -->

@@ -1,9 +1,11 @@
 ---
 title: "DOM操作常用API总结"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "前段时间工作中开发的项目,没有用到三大框架,也没有引入 jQuery,全是原生的 JS,其中涉及到了一些 DOM 操作,因此这两天趁着空闲的时间把 DOM 操作中的 API 回顾了一下."
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # DOM操作常用API总结 -->

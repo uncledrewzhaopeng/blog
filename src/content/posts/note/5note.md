@@ -1,9 +1,11 @@
 ---
 title: "Vue 实现tabs标签页的切换"
-published: 2020-03-11
-category: "笔记"
-tags: ["NOTE"]
+pubDatetime: 2020-03-11
+description: "Vue 实现tabs标签页的切换"
 draft: false
+tags:
+  - "NOTE"
+  - "笔记"
 ---
 
 ![效果图](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9hZTAxLmFsaWNkbi5jb20va2YvSDIwZjUwOTUwMzBjMTQxMWE5MmE5ZDI2M2YwODhhZDM5MC5wbmc?x-oss-process=image/format,png)

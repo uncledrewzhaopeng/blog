@@ -1,9 +1,11 @@
 ---
 title: "void 0与undefined的关系"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "在练习 TypeScript 的时候,在对比.ts 文件和转换后的.js 文件的时候:"
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # void 0与undefined的关系 -->

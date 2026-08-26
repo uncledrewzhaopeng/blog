@@ -1,9 +1,11 @@
 ---
 title: "正则实现时间字符串格式化"
-published: 2021-02-23
-category: "笔记"
-tags: ["NOTE"]
+pubDatetime: 2021-02-23
+description: "// 第二步: 设定好我们目标时间格式，把数组中对应的项替换到指定的区域内 var resStr = '{0}年{1}月{2}日 {3}时{4}分{5}秒' var reg = /{(\\d+)}/g resStr = resStr.replace(reg, function() { var num = argum..."
 draft: false
+tags:
+  - "NOTE"
+  - "笔记"
 ---
 
 ### 正则实现时间字符串格式化并在原型上实现一个方法

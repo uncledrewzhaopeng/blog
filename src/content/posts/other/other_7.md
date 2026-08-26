@@ -1,9 +1,11 @@
 ---
 title: "宠域科技"
-published: 2021-05-25
-category: "其他"
-tags: ["OTHER"]
+pubDatetime: 2021-05-25
+description: "实现一个方法 func：将一个字典形式的月份数据（字典的键表示月份，值表示某种销量之类的数据，但不一定是数字或字符串）输出到一个数组对象中（数组的 index 表示月份）"
 draft: false
+tags:
+  - "OTHER"
+  - "其他"
 ---
 
 <!-- # 宠域科技 2021-05-25 -->

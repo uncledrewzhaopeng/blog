@@ -1,9 +1,10 @@
 ---
 title: "数据响应式"
-published: 2020-12-28
-category: "Vue"
-tags: ["Vue"]
+pubDatetime: 2020-12-28
+description: "目的: 是为了实现一个简易版本的 vue 使用Proxy进行数据劫持,实现了渲染数据和双向绑定的功能"
 draft: false
+tags:
+  - "Vue"
 ---
 
 <!-- # 数据响应式 -->

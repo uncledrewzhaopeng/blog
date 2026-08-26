@@ -1,9 +1,11 @@
 ---
 title: "Map 数据结构"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "js 对象本质上是键值对的集合,但是只能用字符串作为键,虽然在定义的时候可以使用Number或者Boolean类型作为键名,但是却会改变它的类型"
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # ES6 Map 数据结构 -->

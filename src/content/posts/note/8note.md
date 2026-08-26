@@ -1,9 +1,11 @@
 ---
 title: "Vue 实现展开收起功能"
-published: 2020-03-27
-category: "笔记"
-tags: ["NOTE"]
+pubDatetime: 2020-03-27
+description: "Vue 实现展开收起功能"
 draft: false
+tags:
+  - "NOTE"
+  - "笔记"
 ---
 
 ```html

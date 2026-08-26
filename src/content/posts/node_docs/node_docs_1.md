@@ -1,9 +1,10 @@
 ---
 title: "node发送邮件功能的实现"
-published: 2020-12-28
-category: "Node"
-tags: ["Node"]
+pubDatetime: 2020-12-28
+description: "很多项目都会有登录功能,登录又分为短信验证码登录和邮箱验证码登录.两者都需要服务端发送随机验证码给客户端,今天我们来实现一个简单的发送邮件的功能吧"
 draft: false
+tags:
+  - "Node"
 ---
 
 <!-- # node发送邮件功能的实现 -->

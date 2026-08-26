@@ -1,9 +1,11 @@
 ---
 title: "使用原生js实现一个回到顶部的功能"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "speed以及speed+=2可以控制滚动的速度以及加速度"
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # 使用原生js实现一个回到顶部的功能 -->

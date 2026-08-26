@@ -1,9 +1,11 @@
 ---
 title: "Vue 绑定Class增加容器的高度"
-published: 2020-03-27
-category: "笔记"
-tags: ["NOTE"]
+pubDatetime: 2020-03-27
+description: "<template> <div class=\"container\" :class=\"{active: test != ''}\"> <input type=\"text\" v-model=\"test\" /> </div> </template>"
 draft: false
+tags:
+  - "NOTE"
+  - "笔记"
 ---
 
 ```html

@@ -1,9 +1,11 @@
 ---
 title: "el-popover 点击确定或取消的时候隐藏弹窗问题"
-published: 2020-04-17
-category: "笔记"
-tags: ["NOTE"]
+pubDatetime: 2020-04-17
+description: "<el-popover placement=\"bottom\" width=\"230\" trigger=\"manual\" v-model=\"visibleList[index]\"> <div class=\"popInfo\"> <p>默认值</p> <el-input v-model=\"defaultValueInp..."
 draft: false
+tags:
+  - "NOTE"
+  - "笔记"
 ---
 
 ```html

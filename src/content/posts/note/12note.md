@@ -1,9 +1,11 @@
 ---
 title: "Vue + element ui 实现复制和打开链接功能"
-published: 2020-04-17
-category: "笔记"
-tags: ["NOTE"]
+pubDatetime: 2020-04-17
+description: "Vue + element ui 实现复制和打开链接功能"
 draft: false
+tags:
+  - "NOTE"
+  - "笔记"
 ---
 
 ```html

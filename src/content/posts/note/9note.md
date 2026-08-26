@@ -1,9 +1,11 @@
 ---
 title: "Vue 实现点击弹窗以外的地方关闭弹窗"
-published: 2020-04-16
-category: "笔记"
-tags: ["NOTE"]
+pubDatetime: 2020-04-16
+description: "<div class=\"icon\" @click.prevent.stop=\"showPop = !showPop\"> <i class=\"el-icon-plus\"></i> </div>"
 draft: false
+tags:
+  - "NOTE"
+  - "笔记"
 ---
 
 ```html

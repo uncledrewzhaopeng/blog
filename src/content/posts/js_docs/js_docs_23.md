@@ -1,9 +1,11 @@
 ---
 title: "JavaScript的执行机制"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "不同于 Java 等多线程语言,JavaScript 这门语言是单线程的,这与它的用途是相关的.大家都知道 JavaScript 诞生之初就是作为浏览器的脚本语言.所以它的主要用途就是与用户进行交互以及操作 DOM.假如有两个线程,其中一个线程想要添加一个节点,而另一个线程则想要删除一个节点.如果这两个线程同时运..."
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # JavaScript的执行机制 -->

@@ -1,9 +1,10 @@
 ---
 title: "小球来回滚动动画"
-published: 2020-12-28
-category: "CSS"
-tags: ["CSS"]
+pubDatetime: 2020-12-28
+description: "<img style=\"width: 400px;\" src=\"https://blog-1257233417.cos.ap-nanjing.myqcloud.com/ballscroll.gif\" alt=\"\">"
 draft: false
+tags:
+  - "CSS"
 ---
 
 <!-- # 小球来回滚动动画 -->

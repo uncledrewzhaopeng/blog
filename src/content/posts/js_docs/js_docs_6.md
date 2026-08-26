@@ -1,9 +1,11 @@
 ---
 title: "浅谈基本包装类型"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "js 中的基本类型有Null , Undefined, String,Number,Boolean,Symbol等, 其中为了便于操作基本类型值,ECMAScript 还提供了String,Number,Boolean 这三个特殊的引用类型.这就是我们今天的主角——基本包装类型."
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # 浅谈基本包装类型 -->

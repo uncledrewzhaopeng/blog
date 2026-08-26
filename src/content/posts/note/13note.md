@@ -1,9 +1,11 @@
 ---
 title: "JavaScript数据类型检测的四种方式"
-published: 2021-02-23
-category: "笔记"
-tags: ["NOTE"]
+pubDatetime: 2021-02-23
+description: "- 使用 typeof 检测检测数据类型，首先返回的都是一个字符串，其次字符串中包含了对应的数据类型"
 draft: false
+tags:
+  - "NOTE"
+  - "笔记"
 ---
 
 #### 一、typeof 用来检测数据类型的运算符

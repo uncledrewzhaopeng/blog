@@ -1,9 +1,11 @@
 ---
 title: "代码提交规范"
-published: 2021-12-10
-category: "其他"
-tags: ["OTHER"]
+pubDatetime: 2021-12-10
+description: "yarn add husky -D"
 draft: false
+tags:
+  - "OTHER"
+  - "其他"
 ---
 
 #### 安装 husky(npm 或者 yarn)

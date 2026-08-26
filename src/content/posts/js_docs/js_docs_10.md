@@ -1,9 +1,11 @@
 ---
 title: "一文了解this指向"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "this 的中文意思是这,在 javascript 中指的是当前执行代码的环境对象.在非严格模式下,总是指向一个对象,在严格模式下可以是任意值.相信很多同学在看到这个 this 的时候,肯定是有点脑壳疼的.所以今天我就写了一篇有关 this 的小文章,来梳理梳理有关 this 的几种用法,希望对大家都能有所帮助"
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # 一文了解this指向 -->

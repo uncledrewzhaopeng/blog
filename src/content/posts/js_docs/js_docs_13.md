@@ -1,9 +1,11 @@
 ---
 title: "深拷贝和浅拷贝"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "javascript 中的数据类型分为基本类型和引用类型.我们平时所说的深浅拷贝都是针对引用类型而言的.对于基本类型,没有深浅拷贝的说法"
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # 来来来,深拷贝和浅拷贝了解一下 -->

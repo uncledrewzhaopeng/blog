@@ -1,9 +1,10 @@
 ---
 title: "鼠标点击水波效果"
-published: 2020-12-28
-category: "CSS"
-tags: ["CSS"]
+pubDatetime: 2020-12-28
+description: "<img style=\"width: 200px;height:200px;\" src=\"https://blog-1257233417.cos.ap-nanjing.myqcloud.com/wave.gif\" alt=\"\">"
 draft: false
+tags:
+  - "CSS"
 ---
 
 <!-- # 鼠标点击水波效果 -->

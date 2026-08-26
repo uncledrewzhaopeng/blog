@@ -1,9 +1,11 @@
 ---
 title: "Git常用指令"
-published: 2021-06-15
-category: "其他"
-tags: ["OTHER"]
+pubDatetime: 2021-06-15
+description: "集中式：完整的代码库在中央服务器，每次上班都需要重新下载一下当前的版本,当成一个图书馆，每次借书，完成工作之后还书，最大的毛病应该就是必须联网才能工作。"
 draft: false
+tags:
+  - "OTHER"
+  - "其他"
 ---
 
 ### 集中式、分布式？有什么区别

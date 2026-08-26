@@ -1,9 +1,11 @@
 ---
 title: "正则的捕获(懒惰性和贪婪性)"
-published: 2021-02-23
-category: "笔记"
-tags: ["NOTE"]
+pubDatetime: 2021-02-23
+description: "// 2、正则捕获的特点 // 1) 懒惰性-> 每一次执行exec只捕获第一个匹配的内容，在不进行任何处理的情况下；在执行多捕获，捕获的还是第一个匹配内容 // lastIndex: 是正则每一次捕获在字符串中开始查找的位置，默认值为0"
 draft: false
+tags:
+  - "NOTE"
+  - "笔记"
 ---
 
 ```javascript

@@ -1,9 +1,11 @@
 ---
 title: "10分钟回顾Location对象的几个知识点"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "Location 对象包含有关当前 URL 的信息.它是一个比较特别的对象,因为它既是 Window 对象的一部分,可通过window.location属性来访问.也是 document 对象的属性,通过document.location来使用."
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # 10分钟回顾Location对象的几个知识点 -->

@@ -1,9 +1,10 @@
 ---
 title: "纯css实现一个菜单的隐藏显示功能"
-published: 2020-12-28
-category: "CSS"
-tags: ["CSS"]
+pubDatetime: 2020-12-28
+description: "实现一个点击按钮,触发菜单隐藏显示的功能"
 draft: false
+tags:
+  - "CSS"
 ---
 
 <!-- # 纯css实现一个菜单的隐藏显示功能 -->

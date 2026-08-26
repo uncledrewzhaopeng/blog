@@ -1,9 +1,11 @@
 ---
 title: "Vue+Vant ui实现图片上传"
-published: 2020-02-29
-category: "笔记"
-tags: ["NOTE"]
+pubDatetime: 2020-02-29
+description: "Vant 图片上传"
 draft: false
+tags:
+  - "NOTE"
+  - "笔记"
 ---
 
 [Vant 图片上传](https://www.csdn.net/)

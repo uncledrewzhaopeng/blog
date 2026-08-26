@@ -1,9 +1,11 @@
 ---
 title: "Vue 实现checkbox的单选以及全选"
-published: 2020-02-29
-category: "笔记"
-tags: ["NOTE"]
+pubDatetime: 2020-02-29
+description: "Vue 实现checkbox的单选以及全选"
 draft: false
+tags:
+  - "NOTE"
+  - "笔记"
 ---
 
 ```html

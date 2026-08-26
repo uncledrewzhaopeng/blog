@@ -1,9 +1,11 @@
 ---
 title: "Vue中 this.$set 的用法"
-published: 2020-04-17
-category: "笔记"
-tags: ["NOTE"]
+pubDatetime: 2020-04-17
+description: "- Vue.set( target, propertyName/index, value ) - target 要更改的数据源（可以是一个对象或者数组） - key 要更改的具体数据（索引） - value 重新赋的值"
 draft: false
+tags:
+  - "NOTE"
+  - "笔记"
 ---
 
 - Vue.set( target, propertyName/index, value )

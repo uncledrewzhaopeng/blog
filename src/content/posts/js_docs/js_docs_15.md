@@ -1,9 +1,11 @@
 ---
 title: "JS生成UUID的多种方式"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "UUID 是 通用唯一识别码 (Universally Unique Identifier)的缩写.其作用是让分布式系统中的所有元素,都能拥有唯一的辨识信息.目前最广泛的,是微软的全局唯一标识符(GUID)."
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # JS生成UUID的多种方式 -->

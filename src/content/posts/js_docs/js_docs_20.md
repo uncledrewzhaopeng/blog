@@ -1,9 +1,11 @@
 ---
 title: "5分钟回顾原生ajax的几个知识点"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "今天早上在整理笔记的时候,发现了很久之前的有关 ajax 的相关内容.当时主要用的还是jQuery的$.ajax().现在jQuery也快要退出历史舞台了,所以今天我们就来讲讲原生的 ajax 吧."
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # 5分钟回顾原生ajax的几个知识点 -->

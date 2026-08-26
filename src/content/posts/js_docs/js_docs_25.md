@@ -1,9 +1,11 @@
 ---
 title: "快来和fetch玩耍吧"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "fetch 是一种使用 promise 为构建块的现代异步网络请求方法.是当今进行异步网络请求的新标准.除了 IE 之外,在各大浏览器中的兼容性都还可以,在caniuse上查询 fetch 的浏览器兼容性,不支持的浏览器可以使用 fetch polyfill.其本质是一种标准,该标准定义了请求,响应和绑定的流程,..."
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # 快来和fetch玩耍吧 -->

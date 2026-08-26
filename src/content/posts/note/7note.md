@@ -1,9 +1,11 @@
 ---
 title: "Vue element-ui点击增加或删除下拉列表"
-published: 2020-03-27
-category: "笔记"
-tags: ["NOTE"]
+pubDatetime: 2020-03-27
+description: "Element-UI 官网 Link 文字链接组件 Select 选择器组件"
 draft: false
+tags:
+  - "NOTE"
+  - "笔记"
 ---
 
 [Element-UI 官网](https://element.eleme.cn/#/zh-CN)

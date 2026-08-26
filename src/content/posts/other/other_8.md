@@ -1,9 +1,11 @@
 ---
 title: "ByteDance"
-published: 2021-06-06
-category: "其他"
-tags: ["OTHER"]
+pubDatetime: 2021-06-06
+description: "web-view"
 draft: false
+tags:
+  - "OTHER"
+  - "其他"
 ---
 
 <!-- # 字节跳动(一面)2021-06-06 -->

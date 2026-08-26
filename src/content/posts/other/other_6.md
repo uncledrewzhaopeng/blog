@@ -1,9 +1,11 @@
 ---
 title: "了解下字符编码的历史"
-published: 2021-06-15
-category: "其他"
-tags: ["OTHER"]
+pubDatetime: 2021-06-15
+description: "相信关于字符编码,大家应该都有所耳闻.多多少少也都能叫出一些名词,像什么 utf-8 , ASCII , Unicode 等.刚好这两天整理笔记的时候,翻到了之前做过一些有关字符编码的笔记,那就索性和大家一起回顾下相关内容喽."
 draft: false
+tags:
+  - "OTHER"
+  - "其他"
 ---
 
 <!-- # 了解下字符编码的历史 -->

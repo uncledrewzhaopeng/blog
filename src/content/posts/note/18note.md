@@ -1,9 +1,11 @@
 ---
 title: "Vue3项目中按需引入Element-Plus组件"
-published: 2022-01-21
-category: "笔记"
-tags: ["NOTE"]
+pubDatetime: 2022-01-21
+description: "- 1、首先安装一个按需导入插件"
 draft: false
+tags:
+  - "NOTE"
+  - "笔记"
 ---
 
 - 1、首先安装一个按需导入插件

@@ -1,9 +1,10 @@
 ---
 title: "常用css片段"
-published: 2020-12-28
-category: "CSS"
-tags: ["CSS"]
+pubDatetime: 2020-12-28
+description: "对某些浏览器没作用,可以使用下面的方法模拟隐藏"
 draft: false
+tags:
+  - "CSS"
 ---
 
 <!-- # 常用css片段 -->

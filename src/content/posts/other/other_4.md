@@ -1,9 +1,11 @@
 ---
 title: "deno入门指南"
-published: 2021-06-15
-category: "其他"
-tags: ["OTHER"]
+pubDatetime: 2021-06-15
+description: "前不久, deno1.0 正式发布,相信大家应该都已经听过它了.毕竟 deno 的作者正是大名鼎鼎的 nodeJS 之父 Ryan Dahl.他在之前声称 node 已经无力回天了,所以他决定新写一个 deno.意为 destroy node.通俗的说就是一个号练废了,现在要重新练一个号."
 draft: false
+tags:
+  - "OTHER"
+  - "其他"
 ---
 
 <!-- # deno入门指南 -->

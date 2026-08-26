@@ -1,9 +1,11 @@
 ---
 title: "instanceof 和 typeof 原理回顾"
-published: 2021-02-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2021-02-28
+description: "- 官方定义: instanceof 运算符用来检测构造函数的prototype 属性是否出现在某个实例对象的原型链上. - 通俗的讲: instanceof 用来判断某个对象是否为某个构造函数的实例. - 形象的讲: 沿着操作符左边对象的proto这条线查找,沿着操作符右边对象的prototype查找.若两条线..."
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # instanceof 和 typeof 原理回顾 -->

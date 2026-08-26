@@ -1,9 +1,11 @@
 ---
 title: "Set 数据结构"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "作为 ES6 提供的一种新数据结构, Set 类似于数组,但其成员却是唯一的,不会有重复的成员出现.Set 本身是一个构造函数,可以生成Set数据结构"
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # ES6 Set 数据结构 -->

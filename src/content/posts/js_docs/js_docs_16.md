@@ -1,9 +1,11 @@
 ---
 title: "JSON.stringify()还能这么玩"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "对于 JSON,相信大家应该都蛮熟悉的.不管是前端还是后端的童鞋,应该每天都会和 JSON 打交道吧.JSON 是 JavaScript Object Notation(JavaScript 对象表示法)的缩写,是一种轻量级的文本数据交换格式,比 xml 更小,更快,更易于解析"
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # JSON.stringify()还能这么玩 -->

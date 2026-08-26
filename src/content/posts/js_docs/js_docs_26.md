@@ -1,9 +1,11 @@
 ---
 title: "Storage对象"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "在 HTML5 提供了两种在客户端储存数据的新方法:localStorage 和 sessionStorage.之前的储存功能由 cookie 来完成,但 cookie 不太适合大量数据的储存,因为每次向服务器请求都会将 cookie 带过去."
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # Storage对象 -->

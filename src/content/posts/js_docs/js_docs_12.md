@@ -1,9 +1,11 @@
 ---
 title: "EventTarget介绍"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "EventTarget 是一个 DOM 接口,由可以接收事件并且可以创建侦听器的对象实现 Element,document,window是最常见的 event target,但其他对象如XMLHttpRequest等"
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # EventTarget介绍 -->

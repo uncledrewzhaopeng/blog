@@ -1,9 +1,11 @@
 ---
 title: "JS精度问题"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "我们大家都知道,JS 有个很经典的浮点运算精度丢失问题,今天我们就来聊一聊这个问题产生的原因,以及该如何去解决它呢?"
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # JS精度问题 -->

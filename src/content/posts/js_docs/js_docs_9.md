@@ -1,9 +1,11 @@
 ---
 title: "JS调用函数的4种方式"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "- 直接作为一个函数调用 - 函数作为方法调用 - 使用构造函数调用函数 - 作为函数方法调用函数"
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # JS调用函数的4种方式 -->

@@ -1,9 +1,11 @@
 ---
 title: "函数的形参和实参"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "相信大家对函数的形参和实参都应该比较熟悉了.今天我们主要是来回顾一下其中的知识点,温故而知新,可以为师矣.最近的文章基本都是我在整理自己以前的笔记时,看到一些知识点的回顾总结."
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # 函数的形参和实参 -->

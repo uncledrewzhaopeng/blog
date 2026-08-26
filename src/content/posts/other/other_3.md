@@ -1,9 +1,11 @@
 ---
 title: "npm发包流程"
-published: 2021-06-15
-category: "其他"
-tags: ["OTHER"]
+pubDatetime: 2021-06-15
+description: "说起 node,大家都很熟悉了,随着 node 一起下载安装的还有我们的包管理工具npm(node package manager).我们平时也是一直在使用 npm 的,但大部分时候,我们使用的都是别人的包.假如有一天我们自己写了一个包,想要上传到 npm 上面去,流程是怎么样的?"
 draft: false
+tags:
+  - "OTHER"
+  - "其他"
 ---
 
 <!-- # npm发包流程 -->

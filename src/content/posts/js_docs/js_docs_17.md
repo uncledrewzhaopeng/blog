@@ -1,9 +1,11 @@
 ---
 title: "一网打尽JS中的循环和遍历"
-published: 2020-12-28
-category: "JavaScript"
-tags: ["JS"]
+pubDatetime: 2020-12-28
+description: "JS 中的循环和遍历提供给我们一种简单快速的方法去做一些重复的事情.学会在不同的场景中使用不同的方法能够帮助我们有效的编写各类代码.在这里整理了一些常见的方法,今天就让我们大家一些来学习一波."
 draft: false
+tags:
+  - "JS"
+  - "JavaScript"
 ---
 
 <!-- # 一网打尽JS中的循环和遍历 -->

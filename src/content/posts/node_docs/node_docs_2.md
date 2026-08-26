@@ -1,9 +1,10 @@
 ---
 title: "一文搞懂exports和module.exports的关系和区别"
-published: 2020-12-28
-category: "Node"
-tags: ["Node"]
+pubDatetime: 2020-12-28
+description: "我们知道 NodeJS 遵循 CommonJS 的规范,使用require关键字来加载模块,使用 exports 和 module.exports 来导出模块,那么这两个导出又有什么关系或者区别呢?"
 draft: false
+tags:
+  - "Node"
 ---
 
 <!-- # 一文搞懂exports和module.exports的关系和区别 -->
